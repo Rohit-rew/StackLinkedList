@@ -22,6 +22,7 @@ public:
             NewNode->next = head;
             head = NewNode;
         }
+        return val;
     }
 
     int pop(){
@@ -55,8 +56,19 @@ public:
             currentNode = currentNode->next;
             count++;
         }
-
         return count+1;
+    }
+
+    int topVal(){
+        return head->data;
+    }
+
+    bool isEmpty(){
+        if(head==NULL){
+            return true;
+        }else{
+            return false;
+        }
     }
 
 };
