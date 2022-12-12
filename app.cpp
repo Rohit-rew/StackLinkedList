@@ -25,7 +25,14 @@ public:
     }
 
     int pop(){
-
+        if(size() > 0){
+            int popedVal = head->data;
+            head = head->next;
+            return popedVal;
+        }else{
+            cout << "notthing to remove" <<endl;
+            return -1;
+        }
     }
 
     void print(){
@@ -64,8 +71,8 @@ int main(){
     stack1->push(37);
     stack1->push(38);
 
-    
 
+    stack1->pop();
     stack1->print();
     cout << "size of stack : " << stack1->size() <<endl;
 }
